@@ -1,4 +1,7 @@
 // eslint-disable-next-line @next/next/no-document-import-in-page
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import BLOG from '@/blog.config'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
@@ -35,6 +38,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Analytics />
+          <SpeedInsights />
         </body>
       </Html>
     )
